@@ -5,7 +5,9 @@
     <h3 class="principal__subtitulo">Dados pessoais</h3>
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="nome">Nome Completo</label>
-      <input name="nome" id="nome" class="campo__escrita" ngModel required />
+      <input name="nome" id="nome" class="campo__escrita" ngModel #nome="ngModel" required minlength="2">
+      <small class="erro__texto" *ngIf="form.controls['nome']?.errors?.['required'] && form.controls['nome']?.touched">Campo obrigatório</small>
+      <small class="erro__texto" *ngIf="nome?.errors?.['minlength'] && nome?.touched">Nome deve ter mais de 2 caracteres</small>
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
