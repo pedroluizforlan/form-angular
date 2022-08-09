@@ -1,13 +1,11 @@
 <main class="principal">
   <h2 class="principal__titulo">Dados do cadastro</h2>
 
-  <form class="principal__formulario" id="formulario" (ngSubmit)="cadastrar(form)" #form="ngForm">
+  <form class="principal__formulario" id="formulario">
     <h3 class="principal__subtitulo">Dados pessoais</h3>
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="nome">Nome Completo</label>
-      <input name="nome" id="nome" class="campo__escrita" ngModel #nome="ngModel" required minlength="2">
-      <small class="erro__texto" *ngIf="form.controls['nome']?.errors?.['required'] && form.controls['nome']?.touched">Campo obrigatório</small>
-      <small class="erro__texto" *ngIf="nome?.errors?.['minlength'] && nome?.touched">Nome deve ter mais de 2 caracteres</small>
+      <input name="nome" id="nome" class="campo__escrita">
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
@@ -25,7 +23,7 @@
     </div>
 
 
-    <!-- <h3 class="principal__subtitulo">Endereço</h3>
+    <h3 class="principal__subtitulo">Endereço</h3>
 
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="cep">CEP</label>
@@ -91,9 +89,7 @@
         </select>
       </div>
 
-    </div> -->
-
-
-    <button type="submit" class="formulario__botao">Enviar formulário</button>
+    </div>
+    <button type="submit" (click)="cadastrar()" class="formulario__botao">Enviar formulário</button>
     </form>
 </main>
