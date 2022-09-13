@@ -27,18 +27,18 @@
 
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="cep">CEP</label>
-      <input name="cep" id="cep" class="campo__escrita" required />
+      <input name="cep" id="cep" class="campo__escrita" />
       <div id="erro"></div>
     </div>
 
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="endereco">Endereço</label>
-      <input name="endereco" id="endereco" class="campo__escrita" required />
+      <input name="endereco" id="endereco" class="campo__escrita" />
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="numero">Numero</label>
-        <input name="numero" id="numero" class="campo__escrita" required />
+        <input name="numero" id="numero" class="campo__escrita" />
       </div>
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="complemento">Complemento</label>
@@ -47,12 +47,12 @@
     </div>
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="bairro">Bairro</label>
-      <input name="bairro" id="bairro" class="campo__escrita" required />
+      <input name="bairro" id="bairro" class="campo__escrita" />
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="cidade">Cidade</label>
-        <input name="cidade" id="cidade" class="campo__escrita" required />
+        <input name="cidade" id="cidade" class="campo__escrita" />
       </div>
 
       <div class="formulario__campo">
@@ -90,6 +90,6 @@
       </div>
 
     </div>
-    <button type="submit" (click)="cadastrar()" class="formulario__botao">Enviar formulário</button>
+    <button type="submit" class="formulario__botao">Enviar formulário</button>
     </form>
 </main>
